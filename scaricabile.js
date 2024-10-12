@@ -139,7 +139,7 @@ function trovaIns(a, b) {
           risultato.result.push(elem);
       }
   }
-  return risultato;
+  return risultato; 
 }
 
 let btn = document.querySelector("#cerca");
@@ -158,11 +158,11 @@ btn.addEventListener('click', () => {
   cont.innerText = "trovate: " + ris.count + " inserzioni";
  
   let ul = document.querySelector(".risultati");
-  ul.innerHTML = "";
+  ul.innerHTML = ""; 
   
   for(let elem of ris.result){
     let li = document.createElement("li");
-    li.classList.toggle("li");
+    li.classList.add("li");
     li.innerHTML = `<span>Profilo: ${elem.title} <br><br> Località: ${elem.location}</span>`;
     ul.appendChild(li);
   } 
