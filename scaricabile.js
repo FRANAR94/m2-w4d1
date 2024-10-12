@@ -155,7 +155,7 @@ btn.addEventListener('click', () => {
   let ris = trovaIns(lavoro, localita);
 
   let cont = document.querySelector("#conteggio");
-  cont.innerText = "trovate: " + ris.count + " inserzioni";
+  cont.innerText = "Trovati: " + ris.count + " Annunci";
  
   let ul = document.querySelector(".risultati");
   ul.innerHTML = ""; 
@@ -163,7 +163,7 @@ btn.addEventListener('click', () => {
   for(let elem of ris.result){
     let li = document.createElement("li");
     li.classList.add("li");
-    li.innerHTML = `<span>Profilo: ${elem.title} <br><br> Località: ${elem.location}</span>`;
+    li.innerHTML = `<p><b>Profilo:</b> ${elem.title} <br><br> <b>Località:</b> ${elem.location}</p>`;
     ul.appendChild(li);
   } 
   lav.value = "";

@@ -37,12 +37,28 @@ header{
     border: 1px solid white;
 }
 
+button{
+    background-color: rgb(255, 157, 0);
+    padding:6px;
+    border-radius: 5px;
+    color:white;
+}
+
 .cont{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
     width: 18%;
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: rgb(255, 255, 255);}
+    50% { color: rgb(17, 255, 17); }
+    75% { color: rgb(255, 68, 236); }
+    100% { color: red; }
 }
 
 ul{
@@ -68,11 +84,10 @@ ul{
 }
 
 li:hover{
-    background-color: rgb(0, 84, 157);
+    background-color: rgb(86, 154, 214);
     color:white;
 }
 
 button:hover{
-    background-color: rgb(59, 144, 220);
-    color: white;
+    background-color: rgb(235, 114, 8);
 }
